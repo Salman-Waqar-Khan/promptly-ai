@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Promptly AI - ask anything and receive an AI generated answer." />
+    <title>Promptly AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="site-title">
+        <div class="brand"><span class="brand-mark">✦</span> Promptly AI</div>
+        <div class="hero-copy">
+          <p class="eyebrow">SMART IDEAS, INSTANTLY</p>
+          <h1 id="site-title">ভাবুন। লিখুন।<br /><span>তৈরি করুন।</span></h1>
+          <p class="subtitle">আপনার যেকোনো প্রশ্ন বা আইডিয়া লিখুন, AI আপনাকে সাহায্য করবে।</p>
+        </div>
+      </section>
+
+      <section class="ai-card" aria-label="AI prompt generator">
+        <form id="prompt-form" novalidate>
+          <label for="prompt">আপনার prompt লিখুন</label>
+          <div class="input-wrap">
+            <textarea id="prompt" name="prompt" rows="5" placeholder="যেমন: বাংলাদেশের জন্য একটি sustainable business idea দাও..." maxlength="2000"></textarea>
+            <span id="character-count" aria-live="polite">0 / 2000</span>
+          </div>
+          <p id="error-message" class="message error" role="alert" hidden></p>
+          <button id="generate-button" type="submit">
+            <span class="button-text">Generate করুন</span><span class="button-icon">→</span>
+          </button>
+        </form>
+
+        <div id="result-panel" class="result-panel" aria-live="polite" hidden>
+          <div class="result-heading"><span class="result-spark">✦</span><h2>AI এর উত্তর</h2></div>
+          <div id="result" class="result-content"></div>
+          <button id="copy-button" class="copy-button" type="button">উত্তর কপি করুন</button>
+        </div>
+      </section>
+      <p class="footer-note">Powered by OpenAI · আপনার prompt নিরাপদে প্রসেস করা হয়</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
